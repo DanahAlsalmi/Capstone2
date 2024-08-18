@@ -141,10 +141,10 @@ public class AttendanceService {
         double dailyRate = employee.getSalary() / DAYS_IN_MONTH;
         double hourlyRate = dailyRate / REGULAR_HOURS;
 
-        double adjustedOvertimeHours = attendance.getOvertimeHours() * OVERTIME_MULTIPLIER;
+        double OvertimeHours = attendance.getOvertimeHours() * OVERTIME_MULTIPLIER;
 
         // Calculate the total overtime pay
-        double overtimePay = adjustedOvertimeHours * hourlyRate;
+        double overtimePay = OvertimeHours * hourlyRate;
 
         return overtimePay;
     }
